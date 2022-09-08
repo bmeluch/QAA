@@ -1,0 +1,14 @@
+	STAR --runThreadN 8 --runMode alignReads --outFilterMultimapNmax 3 --outSAMunmapped Within KeepPairs --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesCommand zcat --readFilesIn /projects/bgmp/shared/2017_sequencing/demultiplexed/8_2F_fox_S7_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/8_2F_fox_S7_L008_R2_001.fastq.gz --genomeDir /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.STAR_2.7.1a --outFileNamePrefix /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/aligned/8_2F_fox_S7_L008_R1_001
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Sep 07 13:39:36 ..... started STAR run
+Sep 07 13:39:36 ..... loading genome
+Sep 07 13:39:51 ..... started mapping
+Sep 07 13:44:51 ..... finished mapping
+Sep 07 13:44:52 ..... finished successfully
+	STAR --runThreadN 8 --runMode alignReads --outFilterMultimapNmax 3 --outSAMunmapped Within KeepPairs --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesCommand zcat --readFilesIn /projects/bgmp/shared/2017_sequencing/demultiplexed/14_3B_control_S10_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/14_3B_control_S10_L008_R2_001.fastq.gz --genomeDir /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.STAR_2.7.1a --outFileNamePrefix /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/aligned/14_3B_control_S10_L008_R2_001
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Sep 07 13:44:52 ..... started STAR run
+Sep 07 13:44:52 ..... loading genome
+Sep 07 13:45:12 ..... started mapping
+Sep 07 13:45:47 ..... finished mapping
+Sep 07 13:45:48 ..... finished successfully

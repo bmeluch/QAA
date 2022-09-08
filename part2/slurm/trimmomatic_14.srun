@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --account=bgmp
+#SBATCH --partition=bgmp
+#SBATCH --job-name=trimmomatic_14
+#SBATCH --cpus-per-task=4
+#SBATCH --nodes=1
+#SBATCH --output=trimmomatic_14_%j.out
+#SBATCH --error=trimmomatic_14_%j.err
+
+cd /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2
+
+/usr/bin/time -v trimmomatic PE \
+    cutadapt_14_3B_control_S10_L008_R1_001.fastq.gz \
+    cutadapt_14_3B_control_S10_L008_R2_001.fastq.gz \
+    -baseout trimmomatic_14_3B_control_S10.fastq.gz \
+    LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35

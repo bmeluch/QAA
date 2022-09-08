@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --account=bgmp
+#SBATCH --partition=bgmp
+#SBATCH --job-name=QAA_star_db_gen
+#SBATCH --cpus-per-task=8
+#SBATCH --nodes=1
+#SBATCH --output=QAA_star_db_gen_%j.out
+#SBATCH --error=QAA_star_db_gen_%j.err
+
+cd /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3
+
+/usr/bin/time -v STAR --runThreadN 8 \
+--runMode genomeGenerate \
+--genomeDir /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.STAR_2.7.1a \
+--genomeFastaFiles /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.dna.primary_assembly.fa \
+--sjdbGTFfile /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.gtf

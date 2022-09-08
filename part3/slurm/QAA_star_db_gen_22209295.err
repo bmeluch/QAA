@@ -1,0 +1,23 @@
+	Command being timed: "STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.STAR_2.7.1a --genomeFastaFiles /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.dna.primary_assembly.fa --sjdbGTFfile /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/Mus_musculus.GRCm39.107.gtf"
+	User time (seconds): 5298.48
+	System time (seconds): 54.63
+	Percent of CPU this job got: 502%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:45.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32383456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 295751
+	Voluntary context switches: 17253
+	Involuntary context switches: 5423
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
