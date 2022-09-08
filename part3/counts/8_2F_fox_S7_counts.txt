@@ -1,0 +1,2 @@
+Mapped reads: 33556914
+Unmapped reads: 1289546

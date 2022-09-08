@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --account=bgmp
+#SBATCH --partition=bgmp
+#SBATCH --job-name=QAA_qual_hist
+#SBATCH --cpus-per-task=4
+#SBATCH --nodes=1
+#SBATCH --output=QAA_qual_hist_%j.out
+#SBATCH --error=QAA_qual_hist_%j.err
+
+conda activate QAA
+cd /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part1
+
+/usr/bin/time -v /projects/bgmp/bmeluch/bioinfo/Bi622/Demultiplex/Assignment-the-first/base_distribution.py \
+-f /projects/bgmp/shared/2017_sequencing/demultiplexed/8_2F_fox_S7_L008_R1_001.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part1/my_plots/8_2F_fox_S7_L008_R1_001_qual_hist.png
+
+/usr/bin/time -v /projects/bgmp/bmeluch/bioinfo/Bi622/Demultiplex/Assignment-the-first/base_distribution.py \
+-f /projects/bgmp/shared/2017_sequencing/demultiplexed/8_2F_fox_S7_L008_R2_001.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part1/my_plots/8_2F_fox_S7_L008_R2_001_qual_hist.png
+
+/usr/bin/time -v /projects/bgmp/bmeluch/bioinfo/Bi622/Demultiplex/Assignment-the-first/base_distribution.py \
+-f /projects/bgmp/shared/2017_sequencing/demultiplexed/14_3B_control_S10_L008_R1_001.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part1/my_plots/14_3B_control_S10_L008_R1_001_qual_hist.png
+
+/usr/bin/time -v /projects/bgmp/bmeluch/bioinfo/Bi622/Demultiplex/Assignment-the-first/base_distribution.py \
+-f /projects/bgmp/shared/2017_sequencing/demultiplexed/14_3B_control_S10_L008_R2_001.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part1/my_plots/14_3B_control_S10_L008_R2_001_qual_hist.png

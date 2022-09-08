@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --account=bgmp
+#SBATCH --partition=bgmp
+#SBATCH --job-name=QAA_length_dist
+#SBATCH --cpus-per-task=4
+#SBATCH --nodes=1
+#SBATCH --output=QAA_length_dist_%j.out
+#SBATCH --error=QAA_length_dist_%j.err
+
+cd /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2
+conda activate QAA
+
+/usr/bin/time -v ./length_dist.py \
+-r1 /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/trimmomatic_8_2F_fox_S7_1P.fastq.gz \
+-r2 /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/trimmomatic_8_2F_fox_S7_2P.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/8_2F_fox_S7_length_dist.png
+
+/usr/bin/time -v ./length_dist.py \
+-r1 /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/trimmomatic_14_3B_control_S10_1P.fastq.gz \
+-r2 /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/trimmomatic_14_3B_control_S10_2P.fastq.gz \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part2/14_3B_control_S10_length_dist.png

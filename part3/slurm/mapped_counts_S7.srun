@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account=bgmp
+#SBATCH --partition=bgmp
+#SBATCH --job-name=QAA_mapped_counts
+#SBATCH --cpus-per-task=8
+#SBATCH --nodes=1
+#SBATCH --output=QAA_mapped_counts_%j.out
+#SBATCH --error=QAA_mapped_counts_%j.err
+
+cd /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3
+
+/usr/bin/time -v /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/PS8.py \
+-f /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/aligned/8_2F_fox_S7Aligned.out.sam \
+-o /projects/bgmp/bmeluch/bioinfo/Bi623/QAA/part3/counts/8_2F_fox_S7_counts.txt
